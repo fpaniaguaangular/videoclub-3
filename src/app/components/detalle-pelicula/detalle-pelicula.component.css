@@ -1,0 +1,12 @@
+#detalle {
+    text-align: center;
+    width: 220px;
+    padding: 5px;
+    background-color: cornflowerblue;
+    border-radius: 5px;
+
+    position: fixed;
+    width: 20%;
+    left:40%;
+    top:20%;
+}

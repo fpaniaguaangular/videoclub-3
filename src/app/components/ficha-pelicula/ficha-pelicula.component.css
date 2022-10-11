@@ -1,0 +1,8 @@
+article {
+    width: 220px;
+    padding: 5px;
+    background-color: bisque;
+    border-radius: 5px;
+    margin:5px;
+    float:left;
+}

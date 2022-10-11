@@ -1,0 +1,9 @@
+<div id="detalle">
+    <input type="text" [(ngModel)]="nuevoTitulo">
+    <h5>{{peliculaDetallada.director}}</h5>
+    <div>
+        <img [src]="peliculaDetallada.imagen" width="200px">
+    </div>
+    <button (click)="cerrar()">Cerrar</button>
+    <button (click)="guardar()">Modificar</button>
+</div>

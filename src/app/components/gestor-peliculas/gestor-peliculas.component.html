@@ -1,0 +1,9 @@
+<app-buscador (eventoBusqueda)="cargarDatos()"></app-buscador>
+<article *ngFor="let pelicula of peliculas">
+    <app-ficha-pelicula 
+        [pelicula]="pelicula" 
+        [gestionado]="true"
+        (eventoDetalle)="mostrarDetalle($event)">
+    </app-ficha-pelicula>
+</article>
+<app-detalle-pelicula [peliculaDetallada]="peliculaDetallada" *ngIf="detalleVisible" (eventoCerrar)="cerrar()"></app-detalle-pelicula>
