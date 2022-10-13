@@ -10,7 +10,6 @@ import { ProveedorPeliculasService } from 'src/app/services/proveedor-peliculas.
 export class GestorPeliculasComponent implements OnInit {
 
   public peliculas:Pelicula[]=[];
-  public peliculasFiltradas:Pelicula[]=[];
   public detalleVisible:boolean=false;
   public peliculaDetallada:Pelicula|any;
   public cadenaBusqueda:string="";

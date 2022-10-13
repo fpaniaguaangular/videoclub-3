@@ -12,7 +12,7 @@ export class ProveedorPeliculasService {
   constructor() { 
     this.peliculas = [
       {titulo:"Tiburón",director:"Steven Spielberg",imagen:"https://i.etsystatic.com/19389619/r/il/b4518b/2598217185/il_fullxfull.2598217185_8bx4.jpg"},
-      {titulo:"Alien",director:"Ridley Scott",imagen:"https://i.ebayimg.com/images/g/WYAAAOSwpXpZyodo/s-l500.jpg"},
+      {titulo:"Alien",director:"Ridley Scott",imagen:"https://i.etsystatic.com/14461980/r/il/28c6d5/1417485862/il_fullxfull.1417485862_le2x.jpg"},
       {titulo:"El exorcista",director:"William Friedkin",imagen:"https://m.media-amazon.com/images/I/71lXNBrOLbL._AC_SY606_.jpg"},
       {titulo:"Sharknado",director:"Anthony C. Ferrante",imagen:"https://static.posters.cz/image/750/posters/sharknado-one-sheet-i15737.jpg"},
       {titulo:"The fog",director:"Carpenter",imagen:"https://i.pinimg.com/originals/3b/3a/05/3b3a05d0e0534cd41c4e376cf548176b.jpg"},
