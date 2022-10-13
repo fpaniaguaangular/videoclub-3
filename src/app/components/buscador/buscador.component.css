@@ -1,0 +1,12 @@
+#div-buscar {
+    text-align: center;
+    border-radius: 3px;
+    background-color: gray;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+input, button {
+    font-size: large;
+    padding: 3px;
+    margin: 3px;
+}

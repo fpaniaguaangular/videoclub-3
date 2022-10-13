@@ -8,19 +8,17 @@ import { ProveedorPeliculasService } from 'src/app/services/proveedor-peliculas.
 })
 export class BuscadorComponent implements OnInit {
 
-  @Output() eventoBusqueda:EventEmitter<string>;
   cadena:string="";
-  constructor(private servicioVideoclub:ProveedorPeliculasService) { 
-    this.eventoBusqueda = new EventEmitter<string>();
+  @Output() propagarBusqueda:EventEmitter<string>;
+  constructor() { 
+    this.propagarBusqueda = new EventEmitter<string>();
   }
 
   ngOnInit(): void {
   }
 
   buscar():void {
-    console.log("Buscando...");
-    this.servicioVideoclub.getPeliculas(this.cadena);
-    this.eventoBusqueda.emit("");
+    this.propagarBusqueda.emit(this.cadena);
   }
 
 }

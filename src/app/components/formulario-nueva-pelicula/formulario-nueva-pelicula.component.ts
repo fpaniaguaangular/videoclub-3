@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Pelicula } from 'src/app/models/pelicula';
 import { ProveedorPeliculasService } from 'src/app/services/proveedor-peliculas.service';
 
@@ -10,15 +10,17 @@ import { ProveedorPeliculasService } from 'src/app/services/proveedor-peliculas.
 export class FormularioNuevaPeliculaComponent implements OnInit {
 
   nuevaPelicula:Pelicula = new Pelicula();
+  @Output() eventoAgregar:EventEmitter<any>;
   constructor(private servicioVideoclub:ProveedorPeliculasService) { 
+    this.eventoAgregar=new EventEmitter();
   }
 
   ngOnInit(): void {
   }
 
   agregar():void{
-    console.log("Agregando película...");
     this.servicioVideoclub.agregarPelicula({...this.nuevaPelicula});
+    this.eventoAgregar.emit();
   }
 
 }

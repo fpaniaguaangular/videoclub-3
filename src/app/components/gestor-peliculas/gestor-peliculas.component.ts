@@ -13,21 +13,30 @@ export class GestorPeliculasComponent implements OnInit {
   public peliculasFiltradas:Pelicula[]=[];
   public detalleVisible:boolean=false;
   public peliculaDetallada:Pelicula|any;
+  public cadenaBusqueda:string="";
 
   constructor(private servicioVideoclub:ProveedorPeliculasService) { 
     this.cargarDatos();
   }
 
   cargarDatos():void{
-    this.peliculas = this.servicioVideoclub.getPeliculas("");
-    console.log(this.peliculas);
+    this.peliculas = this.servicioVideoclub.getPeliculas();
+    if (this.cadenaBusqueda!=""){
+      this.buscar(this.cadenaBusqueda);
+    }
+  }
+
+  buscar(cadena:string):void{
+    this.cadenaBusqueda=cadena;
+    this.peliculas = this.servicioVideoclub.getPeliculas().filter(
+      p=>(p.titulo.search(cadena)>=0));
+  
   }
 
   ngOnInit(): void {
   }
 
   mostrarDetalle(pelicula:Pelicula){
-    console.warn("Mostrando detalle..." + pelicula.titulo);
     this.peliculaDetallada=pelicula;
     this.detalleVisible=true;
   }

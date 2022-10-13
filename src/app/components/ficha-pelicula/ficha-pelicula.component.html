@@ -1,10 +1,10 @@
 <article>
-    <h3>{{pelicula.titulo}}</h3>
+    <h2>{{pelicula.titulo}}</h2>
     <h5>{{pelicula.director}}</h5>
     <div>
-        <img [src]="pelicula.imagen" width="200px">
+        <img [src]="pelicula.imagen">
     </div>
-    <div *ngIf="gestionado">
+    <div *ngIf="gestionado" id="botonera">
         <button (click)="mostrarDetalle()">Ver detalle</button>
         <button (click)="eliminarPelicula()">Eliminar</button>
     </div>

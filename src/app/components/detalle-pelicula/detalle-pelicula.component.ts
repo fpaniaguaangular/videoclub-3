@@ -22,7 +22,6 @@ export class DetallePeliculaComponent implements OnInit {
   }
 
   public cerrar():void{
-    console.error("CERRANDO...(PENDIENTE)");
     this.eventoCerrar.emit();
   }
 
